@@ -52,7 +52,7 @@ pub fn weather_info(city: &str) {
 
     println!("\nWeather in {}: {}\n> Temperature: {} \u{2103}\n> Pressure: {} hPa\n> Humidity: {}%\n> Wind Speed: {} m/s",
         city.to_uppercase(),
-        data.weather.first().unwrap().description,
+        data.weather[0].description,
         (data.main.temp -273.15).round(),
         data.main.pressure,
         data.main.humidity,
